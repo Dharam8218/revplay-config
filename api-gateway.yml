@@ -9,7 +9,7 @@ spring:
         - id: auth-service
           uri: lb://USER-SERVICE
           predicates:
-            - Path=/revplay/auth/**
+            - Path=/revplay/**
 
         - id: catalog-service
           uri: lb://CATALOG-SERVICE
