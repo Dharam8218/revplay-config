@@ -2,24 +2,13 @@ server:
   port: 8085
 
 spring:
-  application:
-    name: USER-SERVICE
-
-  config:
-    import: optional:configserver:http://localhost:8888
-
   datasource:
     url: jdbc:mysql://localhost:3306/revplay_user_db
-    username: revature
-    password: dharam
 
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
-
-  profiles:
-    active: local
 
 eureka:
   client:
@@ -29,7 +18,4 @@ eureka:
     prefer-ip-address: true
 
 jwt:
-  secret: mySecretKeyForJWTTokenGenerationThatIsAtLeast256BitsLongForHS256Algorithm
   expiration: 86400000
-
-
